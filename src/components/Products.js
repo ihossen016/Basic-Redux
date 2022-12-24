@@ -19,6 +19,10 @@ const Products = () => {
         return <h2>Loading...</h2>;
     }
 
+    if (status === STATUSES.ERROR) {
+        return <h2>Something went wrong! Look into console for details.</h2>;
+    }
+
     return (
         <div className="productsWrapper">
             {products.map(product => (
